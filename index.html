@@ -193,6 +193,9 @@ body{
         <div class="mario mario-corriendo mario-saltando "></div>
 
         <div class="score">0</div>
+        <div class="jump">
+            <button type="button" style=" width: 70px; height: 40px;" onclick="Saltar()" >JUMP</button>
+        </div>
 
     </div>
 
@@ -303,6 +306,9 @@ function HandleKeyDown(ev){
 }
 
 function Saltar(){
+    if(parado){
+            location.reload();
+        }
     if(dinoPosY === sueloY){
         saltando = true;
         velY = impulso;
